@@ -1,0 +1,4 @@
+#based on the permutations of the remainders of the specific nucleotide sequence. 
+#3 is our MCD
+#there are three loosing permutations
+#all others spport our winning strategy
