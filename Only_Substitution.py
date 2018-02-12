@@ -1,5 +1,5 @@
 """Transformation of a word to another one with same length where each intermediate belongs to an English dictionary.
-:All possible paths from start to end are found"""
+All possible paths from start to end are found."""
 
 
 
