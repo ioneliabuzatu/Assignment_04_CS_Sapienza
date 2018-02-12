@@ -45,9 +45,9 @@ class Solution(object):
                 for i in range(len(start)):
                     left = word[:i]
                     right = word[i + 1:]
-                    for c in alphabet:
-                        if c != word[i]:
-                            next_word = left + c + right
+                    for char in alphabet:
+                        if char != word[i]:
+                            next_word = left + char + right
                             if next_word in dictionary:
                                 a[next_word].append(word)
                                 cur_word.add(next_word)
