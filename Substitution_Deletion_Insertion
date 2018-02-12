@@ -11,19 +11,16 @@ def BuildGraph(english_dictionary):
     graph = collections.defaultdict(list)  #each word is a key with a value that designate the transformations of that word
     letters = alphabet
     for word in english_dictionary:
-        for i in range(len(word)):
-            
+        for i in range(len(word)): 
             # deletion
             remove = word[:i] + word[i + 1:]
             if remove in english_dictionary:
-                graph[word].append(remove)
-            
+                graph[word].append(remove)     
             # substitution
             for char in letters:
                 change = word[:i] + char + word[i + 1:]
                 if change in english_dictionary and change != word:
-                    graph[word].append(change)
-        
+                    graph[word].append(change)        
         # insertion
         for i in range(len(word) + 1):
             for char in letters:
@@ -44,7 +41,7 @@ graph = BuildGraph(test)
 
 def transform(graph, start_word, end_word):
     
-    """It finds the shortest from start_word to end_word"""
+    """It finds the shortest path from start_word to end_word"""
     
     paths = collections.deque([[start_word]])
     extended = set()
