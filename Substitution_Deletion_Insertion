@@ -1,4 +1,4 @@
-"""Grath of an English disctionary where each node is a word with undirected edges. 
+"""Grath of an English disctionary where each node is a word with undirected edge. 
 Shorthest path from start to end is found througth deletions, substitutions and insertions """
 
 
