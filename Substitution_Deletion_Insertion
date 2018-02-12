@@ -1,28 +1,29 @@
-"""Grath of an English disctionary where each node is a word with undirected edge. 
-Shorthest path from start to end is found througth deletions, substitutions and insertions """
-
-
 import collections
 from string import ascii_lowercase as alphabet
 
 
 def BuildGraph(english_dictionary):
+    
     """Each word of an English dictionary is a node with undirected edge
     if one word could be converted to another by a single transformation:
     deleting a character, substituting a character, or inserting a character"""
+    
     graph = collections.defaultdict(list)  #each word is a key with a value that designate the transformations of that word
     letters = alphabet
     for word in english_dictionary:
         for i in range(len(word)):
+            
             # deletion
             remove = word[:i] + word[i + 1:]
             if remove in english_dictionary:
                 graph[word].append(remove)
+            
             # substitution
             for char in letters:
                 change = word[:i] + char + word[i + 1:]
                 if change in english_dictionary and change != word:
                     graph[word].append(change)
+        
         # insertion
         for i in range(len(word) + 1):
             for char in letters:
@@ -39,8 +40,12 @@ test=['damp', 'teal', 'camp', 'head', 'came', 'tea', 'lame', 'lime', 'like', 'he
 
 graph = BuildGraph(test)
 
-#It finds the shortest path from start to end
+
+
 def transform(graph, start_word, end_word):
+    
+    """It finds the shortest from start_word to end_word"""
+    
     paths = collections.deque([[start_word]])
     extended = set()
     # Breadth First Search
