@@ -68,4 +68,5 @@ def transform(graph, start_word, end_word):
     return[]
 
 
-print('-->'.join(transform(graph, 'head', 'tea')))  # output ['head', 'tead', 'tea'] is faster if the English dictionary is used instead of the list 'test'
+print('-->'.join(transform(graph, 'head', 'tea')))  
+# it outputs ['head', 'tead', 'tea'], faster if the English dictionary is used instead of the list 'test'
