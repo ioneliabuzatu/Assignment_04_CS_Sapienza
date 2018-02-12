@@ -1,4 +1,25 @@
 #based on the permutations of the remainders of the specific nucleotide sequence. 
 #3 is our MCD
 #there are three loosing permutations
-#all others spport our winning strategy
+#all others support our winning strategy
+
+3 is the the guaranteed number of nucleotides removed per turn. 
+If player1 removes one nucleotide, players2 can remove two nucleotides but never three. 
+So we exclude 4.
+
+Starting from this, let's divede each nucleotide sequence (A or T or C or G) by three and obtaining the remainder of each one.
+The position of each remainder is highly taken into consideration, where each remainder is dependent from one another and 
+if one ramainder is summed up with another one or delocated, this will affect the winning startegy for the reasons explained below. 
+
+Three winning permutations have been found. 
+How?
+Starting from a sequence with remainders 1 1 1 1, players 1 will always lose no matter the moves of player2 are.
+That's the same for length of a sequence of n: 1, 4 or 10 or whatever number with remainder 1.
+In 1-1-1-1 wheather player 1 removes one or two nucleotides, 
+that's enough for player2 to remove one or two nucleotides accordingly and leave player1 
+with only one type of nucleotide.
+
+Same reasoning for a sequence with remainders 0-0-0-0 and 2-2-1 where players2 will win over player1.
+
+In order to win one mustn't find himself under those permutation as a player2.
+
