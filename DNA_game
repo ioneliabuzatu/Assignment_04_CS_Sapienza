@@ -28,5 +28,5 @@ with only one type of nucleotide.
 
 Same reasoning for a sequence with remainders 0-0-0-0 and 2-2-1 where players2 will win over player1.
 
-In order to win one mustn't find himself under those permutation as a player2.
+In order to win one mustn't find himself playing as a player2 under those permutations.
 
