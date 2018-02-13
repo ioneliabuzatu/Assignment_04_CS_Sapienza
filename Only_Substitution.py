@@ -10,14 +10,7 @@ with open("/Users/ioneliabuzatu/Desktop/words.txt", "r") as f:   #file under the
 
 
 class Solution(object):
-    def findPathway(self, start_word, end_word, dictionary):
-        """
-        :type beginWord: str
-        :type endWord: str
-        :type wordlist: Set[str]
-        :rtype: List[List[int]]
-        """
-
+    def findPathway(self, start_word, end_word, dictionary)
         def Path(path, word):
             if len(a[word]) == 0:
                 result.append([word] + path)
