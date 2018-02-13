@@ -8,7 +8,7 @@ def BuildGraph(english_dictionary):
     if one word could be converted to another by a single transformation:
     deleting a character, substituting a character, or inserting a character"""
     
-    graph = collections.defaultdict(list)  #each word is a key with a value that designate the transformations of that word
+    graph = collections.defaultdict(list)  #each word is a key with a value that designates the transformations of that word
     letters = alphabet
     for word in english_dictionary:
         for i in range(len(word)): 
